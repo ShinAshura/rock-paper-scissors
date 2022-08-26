@@ -17,36 +17,41 @@ function getComputerChoice() {
     return scissors;
 }
 
-function playSingleRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
+    const win = 'win';
+    const lose = 'lose';
+    const draw = 'draw';
     // console.log(playerSelection);
     // console.log(computerSelection);
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock') {
-        console.log('It\'s a draw!');
+        return 'It\'s a draw!';
     }
     else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') {
-        console.log('You lose! Paper beats Rock');
+        return 'You lose! Paper beats Rock';
     }
     else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') {
-        console.log('You win! Rock beats Scissors');
+        return 'You win! Rock beats Scissors';
     }
 
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {
-        console.log('You win! Paper beats Rock');
+        return 'You win! Paper beats Rock';
     }
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'paper') {
-        console.log('It\'s a draw!');
+        return 'It\'s a draw!';
     }
     else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') {
-        console.log('You lose! Scissors beats Paper');
+        return 'You lose! Scissors beats Paper';
     }
 
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') {
-        console.log('You lose! ROck beats Scissors');
+        return 'You lose! Rock beats Scissors';
     }
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {
-        console.log('You win! Scissors beats paper');
+        return 'You win! Scissors beats Paper';
     }
     else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'scissors') {
-        console.log('It\'s a draw!');
+        return 'It\'s a draw!';
     }
 }
+
+// console.log(playRound(paper, getComputerChoice()));
