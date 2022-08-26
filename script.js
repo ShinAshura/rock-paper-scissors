@@ -65,7 +65,15 @@ function game() {
     console.log('Computer : ' + computerCount);
     console.log('HAJIME!');
     for (let i = 0; i < 5; i++){
-        // console.log(i);
+        console.log('i = ' + i);
+        if (playerCount === 3) {
+            alert('You win the BO5');
+            return 'You win the BO5';
+        }
+        if (computerCount === 3) {
+            alert('You lose the BO5');
+            return 'You lose the BO5';
+        }
         let playerSelection = prompt('What is your choice ?');
         // if (playerSelection !== rock || playerSelection !== paper || playerSelection !== scissors) {
         //     playerSelection = prompt('What is your choice ?');
@@ -75,6 +83,7 @@ function game() {
         let computerSelection = getComputerChoice();
         // console.log('Player : ' + playerCount);
         // console.log('Computer : ' + computerCount);
+
         if (playRound(playerSelection, computerSelection) === win) {
             playerCount += 1;
             console.log('You win this round!');
